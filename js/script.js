@@ -16,11 +16,12 @@ for (i = 0; i < coll.length; i++) {
 		}
 	})
 }
+let displayBox = document.getElementById('info')
 
 function delay() {
 	let loading = document.getElementById('loading')
 	loading.style.display = "inline"
-
+	displayBox.innerText = "Calculating..."
 	if (loading.style.display = "inline") {
 		setTimeout(OkMain, 1000)
 	}
@@ -30,7 +31,6 @@ function delay() {
 function OkMain() {
 	let unit = document.getElementById('unit').value
 	let ampere = document.getElementById('ampere').value
-	let displayBox = document.getElementById('info')
 
 	// This is for 5 ampere
 	if (ampere == 5) {
