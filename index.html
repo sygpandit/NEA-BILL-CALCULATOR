@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 	<meta http-equiv="Content-Type" charset="utf-8" content="text/html" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Calculate your Nepal Electricity Authority Bills in just seconds." />
-	<meta name="keywords" content="Nepal Electricity Authority, NEA, NEA bill calculator, Electricity Nepal, nea bill inquiry, electricity rate in nepal, electricity rate in nepal 2020, online meter reading nepal, nepal electricity bill rate, electricity bill calculator, nea meter reading;" />
+	<meta name="keywords"
+		content="Nepal Electricity Authority, NEA, NEA bill calculator, Electricity Nepal, nea bill inquiry, electricity rate in nepal, electricity rate in nepal 2020, online meter reading nepal, nepal electricity bill rate, electricity bill calculator, nea meter reading;" />
 	<meta name="robots" content="index, follow" />
 	<meta name="googlebot" content="index, follow" />
 
@@ -20,38 +22,38 @@
 <body>
 	<div class="header"></div>
 	<div class="container" align="center">
-	Enter the MCB Ampere:<br>
-	<select id="ampere" required>
-		<option onmouseenter="delay()">5</option>
-		<option onmouseenter="delay()">15</option>
-		<option onmouseenter="delay()">30</option>
-		<option onmouseenter="delay()">60</option>
-	</select><br>
-	Enter total Units:<br>
-	<input type="number" name="unit" id="unit" min="1" value="1" maxlength="5" 
-	required onkeypress="delay()" ></input>
-	<br><br>
-	<button onclick="delay()" id="btn">Find the cost</button>
-<br>
-<div class="result" id="result">
-	<span id="loading">
-		<i class="fa fa-spinner fa-spin"></i>Loading
-	</span><br>
-	<span id="pinfo" class="answer">The answer will</span>
-	<span id="info" class="answer">be shown here.</span>
-	
+		Enter the MCB Ampere:<br>
+		<select id="ampere" required>
+			<option>5</option>
+			<option>15</option>
+			<option>30</option>
+			<option>60</option>
+		</select><br>
+		Enter total Units:<br>
+		<input type="number" name="unit" id="unit" min="1" value="1" maxlength="5" required
+			onkeypress="delay()"></input>
+		<br><br>
+		<button id="btn">Find the cost</button>
+		<br>
+		<div class="result" id="result">
+			<span id="loading">
+				<i class="fa fa-spinner fa-spin"></i>Loading
+			</span>
+			<span id="info" class="answer">The cost will be shown here</span>
 
-</div>
-</div>
-	<h1 class="collapsible">About This app:
+
+		</div>
+	</div>
+	<h1 class="collapsible">About this application:
 	</h1>
-<div class="content">
+	<div class="content">
 
-	<p>This is the app developed for making the people easy to calculate their Nepal Electricity Authority Bills and cost.
-		Note: This app is not applicable anymore due to some changes in NEA tarrif.
-	</p>
-	
-</div>
+		<p>This is the app developed for making the people easy to calculate their Nepal Electricity Authority Bills and
+			cost.
+		</p>
+
+	</div>
 </body>
 <script type="text/javascript" src="js/script.js"></script>
+
 </html>
