@@ -6,11 +6,20 @@ let displaymsg = document.getElementById('displaymsg')
 let submitButton = document.getElementById('btn')
 submitButton.addEventListener('click', delay)
 
+<<<<<<< HEAD
 let takeElementAmpere = document.getElementById('ampere')
 takeElementAmpere.onblur = delay()
 //let currentUnit = document.getElementById('currentUnit').value
 
 //let previousUnit = document.getElementById('previousUnit').value
+=======
+
+let ampere = document.getElementById('ampere').value
+
+let currentUnit = document.getElementById('currentUnit').value
+
+let previousUnit = document.getElementById('previousUnit').value
+>>>>>>> c664cacd96bda4d93251e394a62897abe97613a6
 
 
 function delay() {
@@ -24,9 +33,13 @@ function delay() {
 }
 
 function OkMain() {
+<<<<<<< HEAD
 	//	let unit = currentUnit - previousUnit
 	ampere = document.getElementById('ampere').value
 	let unit = document.getElementById('unit').value
+=======
+	let unit = currentUnit - previousUnit
+>>>>>>> c664cacd96bda4d93251e394a62897abe97613a6
 	// This is for 5 ampere
 	if (ampere == 5) {
 		if (unit <= 20 && unit >= 0) {
@@ -57,7 +70,11 @@ function OkMain() {
 			displayBox.innerText = (175 + cost)
 		}
 		else {
+<<<<<<< HEAD
 			displayBox.innerText = "Oops, Something went wrong!"
+=======
+			alert("Please recheck the unit given")
+>>>>>>> c664cacd96bda4d93251e394a62897abe97613a6
 
 		}
 	}
@@ -93,7 +110,11 @@ function OkMain() {
 			displayBox.innerText = (200 + cost)
 		}
 		else {
+<<<<<<< HEAD
 			displayBox.innerText = "Oops, Something went wrong!"
+=======
+			alert("Please recheck the unit given")
+>>>>>>> c664cacd96bda4d93251e394a62897abe97613a6
 		}
 
 	}
@@ -129,7 +150,11 @@ function OkMain() {
 			displayBox.innerText = (225 + cost)
 		}
 		else {
+<<<<<<< HEAD
 			displayBox.innerText = "Oops, Something went wrong!"
+=======
+			alert("Please recheck the unit given")
+>>>>>>> c664cacd96bda4d93251e394a62897abe97613a6
 		}
 	}
 	//60 ampere starts
@@ -163,6 +188,7 @@ function OkMain() {
 			displayBox.innerText = (275 + cost)
 		}
 		else {
+<<<<<<< HEAD
 			displayBox.innerText = "Oops, Something went wrong!"
 		}
 	}
@@ -175,5 +201,11 @@ function OkMain() {
 		loading.style.display = 'none'
 		displaymsg.style.display = "none"
 	}
+=======
+			alert("Please recheck the unit given")
+		}
+	}
+
+>>>>>>> c664cacd96bda4d93251e394a62897abe97613a6
 	loading.style.display = 'none'
 }
