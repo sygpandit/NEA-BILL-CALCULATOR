@@ -1,239 +1,99 @@
+:root {
+	--bgcolor: #181a1b;
+	--fgcolor: rgb(211, 207, 201);
+	--elecolor: #125ab8;
+}
+
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	scrollbar-color: #202324 #454a4d;
+	box-sizing: border-box;
+	background-color: var(--bgcolor);
+	font-size: 16px;
+	color: var(--fgcolor);
+	font-family: 'Arial', sans-serif;
+	letter-spacing: .02rem;
+
+
 }
 
-a {
-	text-decoration: none;
-	color: #039be5;
+body {
+	font-weight: 400;
+	line-height: 1.7;
+	padding: 30px;
+	overflow: hidden;
 }
 
 .container {
-	width: 100%;
-	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 90vh;
 
 }
 
-input {
-	border-radius: 4px;
-	background-color: #fff;
-	color: #000;
-	padding: 10px 10px 10px 10px;
-	border-color: #000;
-	border-width: 1px;
-	width: 190px;
+.form-container,
+.outputSection {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.item {
+	padding: 10px;
+	margin: 10px;
+	width: 100%;
+}
+
+input,
+button {
+	border: none;
+	outline: none;
+	appearance: textfield;
+	width: 100%;
+
+}
+
+.form-container>* {
+	margin: 10px 0;
 }
 
 select {
-	border-radius: 4px;
-	background-color: #fff;
-	color: #000;
-	padding: 10px 10px 10px 10px;
-	border-color: #000;
-	border-width: 1px;
-	width: 202px;
-}
-
-.footer span {
-	color: #fff;
-	padding: 10px 10px 10px 10px;
-	text-align: center;
-}
-
-.footer {
-	width: 70%;
-	padding: 10px 10px 10px 10px;
-	bottom: 10px;
-	position: fixed;
-	display: flex;
-	background-color: #2b2b2b;
-	text-align: left;
-}
-
-button {
-	background-color: #039be5;
-	color: #fff;
-	border-width: 0;
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	border: solid 1px var(--fgcolor);
 	cursor: pointer;
-	border-radius: 4px;
-	padding: 10px 10px 10px 10px;
-	width: 202px;
-	text-transform: uppercase;
-	transition: all 0.3s ease-in-out;
 }
 
-button:hover {
-	background-color: #ccc;
-
+label {
+	display: block;
 }
 
-.result {
-	margin-top: 10px;
-	padding: 10px 10px 10px 10px;
-	height: auto;
-	color: #fff;
-	background-color: #000;
+.textarea {
+	border-bottom: solid 1px var(--fgcolor);
 }
 
-span.row2 {
-	float: left;
-}
-
-.footer span:first-child {
-	float: left;
-}
-
-br {
-	line-height: 20px;
-}
-
-#info,
-#pinfo {
-	color: #fff;
-	background: #000;
-}
-
-.footer2 {
-	width: 30%;
-	padding: 8px 10px 10px 10px;
-	bottom: 10px;
-	right: 0px;
-	position: fixed;
-	background-color: #2b2b2b;
-	text-align: right;
-	float: right;
-}
-
-.footer2 a {
+.submitButton {
+	background-color: var(--elecolor);
+	padding: 10px;
+	margin: 40px auto;
+	color: var(--fgcolor);
+	border-radius: 20px;
+	text-transform: capitalize;
+	cursor: pointer;
 	text-align: center;
-	padding: 10px 12px 10px 12px;
-	transition: all 0.3s ease;
-	color: white;
-	font-size: 20px;
-	display: inline-block;
-	border-radius: 50%;
+	appearance: button;
+	-moz-appearance: button;
 }
 
-.footer2 a:first-child {
-	padding: 10px 15px 10px 15px;
-}
-
-.facebook {
-	background: #3B5998;
-	color: white;
-	border: 1px transparent solid;
-}
-
-.facebook:hover {
-	background: silver;
-	color: #3B5998;
-	border: #3B5998 1px solid;
-}
-
-.twitter {
-	background: #55ACEE;
-	color: white;
-	border: 1px transparent solid;
-}
-
-.twitter:hover {
-	color: #55ACEE;
-	background: white;
-	border: 1px #55ACEE solid;
-}
-
-.google {
-	background: #dd4b39;
-	color: #fff;
-	border: 1px transparent solid;
-}
-
-.google:hover {
-	background-color: white;
-	color: green;
-	border: 1px green solid;
-}
-
-.instagram {
-	background-image: linear-gradient(to bottom right, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
-	color: white;
-	border: 1px transparent solid;
-	background-repeat: no-repeat;
-}
-
-.instagram:hover {
-	color: #ccc;
-	background: #000;
-	border: 1px #ccc solid;
-
-}
-
-.youtube {
-	background: #bb0000;
-	color: white;
-	border: 1px transparent solid;
-}
-
-.youtube:hover {
-	color: #ff0000;
-	background-color: white;
-	border: 1px white solid;
-}
-
-.github {
-	color: #fff;
-	background-color: #000;
-	border: 1px transparent solid;
-}
-
-.github:hover {
-	color: #000;
-	background-color: white;
-	border: 1px black solid;
-}
-
-span#loading {
+#loading,
+#displaymsg {
 	display: none;
 }
 
-.collapsible {
-	background-color: #777;
-	color: white;
-	cursor: pointer;
-	padding: 18px;
-	width: auto;
-	margin-left: 11px;
-	margin-right: 11px;
-	border: none;
-	text-align: left;
-	outline: none;
-	font-size: 15px;
-	border-radius: 4px;
-}
-
-.active,
-.collapsible:hover {
-	background-color: #555;
-}
-
-.content {
-	padding: 0 18px;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
-	margin: 10px;
-}
-
-.collapsible:after {
-	content: '\02795';
-	color: white;
-	float: right;
-	margin-left: 5px;
-}
-
-.active:after {
-	content: "\2796";
+.outputSection>* {
+	text-align: center;
 }
