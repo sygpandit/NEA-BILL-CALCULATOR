@@ -20,40 +20,42 @@
 </head>
 
 <body>
-	<div class="header"></div>
-	<div class="container" align="center">
-		Enter the MCB Ampere:
-		<select id="ampere" required>
-			<option>5</option>
-			<option>15</option>
-			<option>30</option>
-			<option>60</option>
-		</select>
-		Enter total Units:
-		<input type="number" name="unit" id="unit" min="1" value="1" maxlength="5" required
-			onkeypress="delay()"></input>
-		<input type="number" name="unit" id="unit" min="1" value="1" maxlength="5" required
-			onkeypress="delay()"></input>
 
-		<button id="btn">Find the cost</button>
-		<br>
-		<div class="result" id="result">
-			<span id="loading">
-				<i class="fa fa-spinner fa-spin"></i>
-			</span>
-			<span id="info" class="answer">The cost will be shown here</span>
+	<div class="container">
+		<div class="form-container">
 
 
+			<div class="otherInputs">
+				<label for="ampere">Select Ampere</label>
+				<select name="mcbAmpere" id="ampere">
+					<option value="5">5</option>
+					<option value="15">15</option>
+					<option value="30">30</option>
+					<option value="60">60</option>
+				</select>
+			</div>
+			<div class="textarea">
+				<label for="previousUnit">Previous Unit</label>
+				<input type="number" id="previousUnit" placeholder="Enter Previous Unit" value="0">
+			</div>
+			<div class="textarea">
+				<label for="currentUnit">Current Unit</label>
+				<input type="number" id="currentUnit" placeholder="Enter Current Unit" value="0">
+			</div>
+			<button class="submitButton" id="btn" type="submit">
+				Calculate
+			</button>
 		</div>
-	</div>
-	<h1 class="collapsible">About this application:
-	</h1>
-	<div class="content">
 
-		<p>This is the app developed for making the people easy to calculate their Nepal Electricity Authority Bills and
-			cost.
-		</p>
-
+		<div class="outputSection">
+			<div class="result" id="result">
+				<span id="displaymsg">Your cost is Rs.</span>
+				<span id="loading">
+					<i class="fa fa-spinner fa-spin"></i>
+				</span>
+				<span id="info" class="answer"></span>
+			</div>
+		</div>
 	</div>
 </body>
 <script type="text/javascript" src="js/script.js"></script>
