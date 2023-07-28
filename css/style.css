@@ -21,7 +21,6 @@ body {
 	font-weight: 400;
 	line-height: 1.7;
 	padding: 30px;
-	overflow: hidden;
 }
 
 .container {
@@ -95,5 +94,17 @@ label {
 }
 
 .outputSection>* {
+	text-align: center;
+}
+
+.imagecontainer {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.imagecontainer>IMG {
+	object-fit: cover;
 	text-align: center;
 }

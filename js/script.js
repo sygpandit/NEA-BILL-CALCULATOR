@@ -6,12 +6,11 @@ let displaymsg = document.getElementById('displaymsg')
 let submitButton = document.getElementById('btn')
 submitButton.addEventListener('click', delay)
 
+let takeElementAmpere = document.getElementById('ampere')
+takeElementAmpere.onblur = delay()
+//let currentUnit = document.getElementById('currentUnit').value
 
-let ampere = document.getElementById('ampere').value
-
-let currentUnit = document.getElementById('currentUnit').value
-
-let previousUnit = document.getElementById('previousUnit').value
+//let previousUnit = document.getElementById('previousUnit').value
 
 
 function delay() {
@@ -25,7 +24,9 @@ function delay() {
 }
 
 function OkMain() {
-	let unit = currentUnit - previousUnit
+	//	let unit = currentUnit - previousUnit
+	ampere = document.getElementById('ampere').value
+	let unit = document.getElementById('unit').value
 	// This is for 5 ampere
 	if (ampere == 5) {
 		if (unit <= 20 && unit >= 0) {
@@ -56,7 +57,7 @@ function OkMain() {
 			displayBox.innerText = (175 + cost)
 		}
 		else {
-			alert("Please recheck the unit given")
+			displayBox.innerText = "Oops, Something went wrong!"
 
 		}
 	}
@@ -92,7 +93,7 @@ function OkMain() {
 			displayBox.innerText = (200 + cost)
 		}
 		else {
-			alert("Please recheck the unit given")
+			displayBox.innerText = "Oops, Something went wrong!"
 		}
 
 	}
@@ -128,7 +129,7 @@ function OkMain() {
 			displayBox.innerText = (225 + cost)
 		}
 		else {
-			alert("Please recheck the unit given")
+			displayBox.innerText = "Oops, Something went wrong!"
 		}
 	}
 	//60 ampere starts
@@ -162,9 +163,17 @@ function OkMain() {
 			displayBox.innerText = (275 + cost)
 		}
 		else {
-			alert("Please recheck the unit given")
+			displayBox.innerText = "Oops, Something went wrong!"
 		}
 	}
+	else {
+		displayBox.innerText = "Oops, Something went wrong!"
 
+	}
+
+	if (displayBox.innerText == "Oops, Something went wrong!") {
+		loading.style.display = 'none'
+		displaymsg.style.display = "none"
+	}
 	loading.style.display = 'none'
 }
