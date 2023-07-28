@@ -1,26 +1,22 @@
-var coll = document.getElementsByClassName("collapsible")
-var i
+let displayBox = document.getElementById('info')
+let loading = document.getElementById('loading')
+let displaymsg = document.getElementById('displaymsg')
 
 
 let submitButton = document.getElementById('btn')
 submitButton.addEventListener('click', delay)
 
-for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener("click", function () {
-		this.classList.toggle("active")
-		var content = this.nextElementSibling
-		if (content.style.maxHeight) {
-			content.style.maxHeight = null
-		} else {
-			content.style.maxHeight = content.scrollHeight + "px"
-		}
-	})
-}
-let displayBox = document.getElementById('info')
+
+let ampere = document.getElementById('ampere').value
+
+let currentUnit = document.getElementById('currentUnit').value
+
+let previousUnit = document.getElementById('previousUnit').value
+
 
 function delay() {
-	let loading = document.getElementById('loading')
 	loading.style.display = "inline"
+	displaymsg.style.display = "inline"
 	displayBox.innerText = "Calculating..."
 	if (loading.style.display = "inline") {
 		setTimeout(OkMain, 1000)
@@ -29,13 +25,10 @@ function delay() {
 }
 
 function OkMain() {
-	let unit = document.getElementById('unit').value
-	let ampere = document.getElementById('ampere').value
-
+	let unit = currentUnit - previousUnit
 	// This is for 5 ampere
 	if (ampere == 5) {
 		if (unit <= 20 && unit >= 0) {
-			let cost = unit * 3
 			displayBox.innerText = (30)
 		}
 		else if (unit <= 30 && unit > 20) {
@@ -63,7 +56,7 @@ function OkMain() {
 			displayBox.innerText = (175 + cost)
 		}
 		else {
-			alert("Invalid unit given")
+			alert("Please recheck the unit given")
 
 		}
 	}
@@ -99,7 +92,7 @@ function OkMain() {
 			displayBox.innerText = (200 + cost)
 		}
 		else {
-			alert("Invalid Unit Given")
+			alert("Please recheck the unit given")
 		}
 
 	}
@@ -135,7 +128,7 @@ function OkMain() {
 			displayBox.innerText = (225 + cost)
 		}
 		else {
-			alert("Invalid Unit Given")
+			alert("Please recheck the unit given")
 		}
 	}
 	//60 ampere starts
@@ -169,8 +162,9 @@ function OkMain() {
 			displayBox.innerText = (275 + cost)
 		}
 		else {
-			alert("Invalid unit given")
+			alert("Please recheck the unit given")
 		}
 	}
+
 	loading.style.display = 'none'
 }
